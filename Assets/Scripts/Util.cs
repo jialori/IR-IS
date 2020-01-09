@@ -14,7 +14,7 @@ namespace Util
 
 	class Controller
 	{
-		public static bool Get Jump()
+		public static bool Jump()
 		{
 			// if (GameManager.instance.UseController)
 			// {
@@ -24,6 +24,16 @@ namespace Util
 			// {
 				return Input.GetKeyDown(KeyCode.Space);
 			// }
+		}
+
+		public static bool IsGravityChange()
+		{
+			return Input.GetMouseButtonUp(0);
+		}
+
+		public static Vector3 GetInputGracityChange()
+		{
+			return Input.mousePosition;
 		}
 
 		// public static bool GetB()
